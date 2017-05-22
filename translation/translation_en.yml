@@ -1,0 +1,9 @@
+#HEADER
+header:
+    home: 'Home'
+    about_us: 'About us'
+    gallery: 'Gallery'
+    carnival: 'Carnival'
+    join_us: 'Join us'
+    book_us: 'Book us'
+    contact: 'Contact'

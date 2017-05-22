@@ -1,0 +1,52 @@
+html *, body * {
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+
+    &::selection {
+        background: #7fe6fe;
+    }
+    &::-moz-selection {
+        background: #7fe6fe;
+    }
+}
+
+
+//Headings
+h2 {
+    color: $white;
+    font-size: 48px;
+    margin: 0 0 90px;
+    font-weight: bold;
+}
+
+
+//Paragraph
+p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+//Links
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+//Align
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+
+//Weight
+.text-thin { font-weight: 100; }
+.text-light { font-weight: 300; }
+.text-regular { font-weight: 400; }
+.text-bold { font-weight: 700; }
+.text-black { font-weight: 900; }
+
+//Color
+.color-white { color: $white; }

@@ -1,0 +1,42 @@
+//Gradients
+[class*="gradient"] {
+    background-size: 300% 300%;
+    animation: pulse 10s ease infinite;
+}
+
+.gradient-2 {
+    background-color: #35BBE0;
+    background-image: linear-gradient(to top left, #E9ECC6, #35BBE0);
+}
+
+.gradient-3 {
+    background-color: #F29100;
+    background-image: linear-gradient(to top left, #FFE47A, #F29100);
+}
+
+.gradient-4 {
+    background-color: #C86D85;
+    background-image: linear-gradient(to top left, #A998C9, #C86D85);
+}
+
+.gradient-5 {
+    background-color: #5CBEBC;
+    background-image: linear-gradient(to top left, #9AD2D3, #5CBEBC);
+}
+
+.gradient-6 {
+    background-color: #E84264;
+    background-image: linear-gradient(to top left, #FFECBC, #E84264);
+}
+
+.gradient-7 {
+    background-color: #151E30;
+    background-image: linear-gradient(to top left, #243B55, #151E30);
+}
+
+
+@keyframes pulse {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

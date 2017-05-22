@@ -1,0 +1,9 @@
+#HEADER
+header:
+    home: 'Home'
+    about_us: 'O nama'
+    gallery: 'Galerija'
+    carnival: 'Karneval'
+    join_us: 'Prikljuci se'
+    book_us: 'Bookiraj nas'
+    contact: 'Kontakt'

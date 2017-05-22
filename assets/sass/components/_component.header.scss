@@ -1,0 +1,54 @@
+//Header
+.header {
+    background: transparent url('../../../Work/Sambansa/assets/images/header.svg') center;
+    //background-size: cover;
+    height: 33px;
+
+
+    //Logo
+    .header__logo {
+        width: 55px;
+        height: auto;
+        position: absolute;
+        top: 5px;
+    }
+
+
+    //Menu
+    .header__menu {
+        @extend .tableize;
+        @extend .tableize--fixed;
+
+
+        //Item
+        .header__menu-item {
+            @extend .tableize__cell;
+            @extend .text-light;
+            @extend .text-center;
+
+            font-size: 16px;
+            padding: 7px 0;
+            cursor: pointer;
+
+            &.active {
+                @extend .text-bold;
+            }
+
+            &:hover {
+                @extend .text-regular;
+
+            }
+        }
+    }
+
+
+    //Trans
+    .header__trans {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+}

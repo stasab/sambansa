@@ -1,0 +1,128 @@
+//Tableize
+
+.tableize,
+%tableize {
+    display: table;
+    width: 100%;
+}
+
+.tableize__cell,
+%tableize__cell {
+    display: table-cell;
+    vertical-align: top;
+}
+
+
+.tableize--middle,
+%tableize--middle {
+
+    .tableize__cell,
+    %tableize__cell {
+        vertical-align: middle;
+    }
+
+}
+
+.tableize--bottom,
+%tableize--bottom {
+
+    > .tableize__cell,
+    > %tableize__cell {
+        vertical-align: bottom;
+    }
+
+}
+
+.tableize--fixed,
+%tableize--fixed {
+    table-layout: fixed;
+}
+
+.tableize--fixed-100,
+%tableize--fixed-100 {
+    table-layout: fixed;
+
+    .tableize__cell {
+        width: 100%;
+    }
+}
+
+.tableize__cell-fixed {
+    width: 1px;
+}
+
+.tableize--full,
+%tableize--full {
+    height: 100%;
+
+    > .tableize__cell,
+    > %tableize__cell {
+
+        &,
+        > .tableize__content,
+        > %tableize__content {
+            height: inherit;
+        }
+
+    }
+}
+
+.tableize__row,
+%tableize__row {
+    display: table-row;
+    height: 1px;
+}
+
+.tableize__row--flexible,
+%tableize__row--flexible {
+    height: auto;
+}
+
+
+/*** RESPONSIVE ***/
+//.tableize {
+//    &.tableize-responsive\@xsmall {
+//        @include respond-to(xsmall-only) {
+//            display: block;
+//
+//            .tableize__row {
+//                display: block;
+//                height: auto;
+//            }
+//
+//            .tableize__cell {
+//                display: block;
+//                margin-bottom: 10px;
+//            }
+//        }
+//    }
+//
+//    &.tableize-responsive\@small {
+//        @include respond-to(small-down) {
+//            display: block;
+//
+//            .tableize__row {
+//                display: block;
+//                height: auto;
+//            }
+//
+//            .tableize__cell {
+//                display: block;
+//                margin-bottom: 10px;
+//            }
+//        }
+//    }
+//
+//
+//    &.tableize-responsive\@medium {
+//        @include respond-to(medium-down) {
+//            display: block;
+//
+//            .tableize__cell {
+//                display: block;
+//                margin-bottom: 10px;
+//            }
+//        }
+//    }
+//
+//}

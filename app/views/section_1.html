@@ -1,0 +1,36 @@
+<header class="header">
+
+    <div class="main-container tableize tableize--fixed">
+        
+        <div class="tableize__cell">
+            <img src="../../assets/images/sambansa_logo.svg"
+                 alt="Sambansa"
+                 class="header__logo">
+        </div>
+
+        <a class="header__item active"
+           data-menuanchor="section_1">{{translation.header.home}}</a>
+        <a class="header__item"
+           data-menuanchor="section_2">{{translation.header.about_us}}</a>
+        <a class="header__item"
+           data-menuanchor="section_3">{{translation.header.gallery}}</a>
+        <a class="header__item"
+           data-menuanchor="section_4">{{translation.header.carnival}}</a>
+        <a class="header__item"
+           data-menuanchor="section_5">{{translation.header.join_us}}</a>
+        <a class="header__item"
+           data-menuanchor="section_6">{{translation.header.book_us}}</a>
+        <a class="header__item"
+           data-menuanchor="section_7">{{translation.header.contact}}</a>
+
+
+        <div class="header__item text-right">
+            <a ng-click="changeTrans('en')"
+               ng-class="{'text-bold': activeLanguage === 'en'}">Eng</a>
+            <strong>&nbsp; | &nbsp;</strong>
+            <a ng-click="changeTrans('sr')"
+               ng-class="{'text-bold': activeLanguage === 'sr'}">Srp</a>
+        </div>
+    </div>
+
+</header>

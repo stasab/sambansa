@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Sambansa">
+    <meta name="keywords" content="Sambansa">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title>Sambansa</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="dist/styles.css" />
+
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+
+    <!--Vendors-->
+    <script src="dist/vendors.min.js"></script>
+
+    <!--Translation-->
+    <script src="translation/translation.js"></script>
+
+    <!--App-->
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/run.js"></script>
+    <script src="app/controller.js"></script>
+
+    <!--Factories-->
+    <script src="app/factories/translation.factory.js"></script>
+
+
+    <!--<link rel="stylesheet" href="../../Work/Sambansa/node_modules/angular-material/angular-material.css">-->
+    <!--<link rel="stylesheet" href="../../Work/Sambansa/dist/styles.css" />-->
+
+
+    <!--<script src="../../Work/Sambansa/node_modules/angular/angular.js"></script>-->
+    <!--<script src="../../Work/Sambansa/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>-->
+
+
+    <!--&lt;!&ndash;Vendors&ndash;&gt;-->
+    <!--<script src="../../Work/Sambansa/dist/vendors.min.js"></script>-->
+
+    <!--&lt;!&ndash;Translation&ndash;&gt;-->
+    <!--<script src="../../Work/Sambansa/translation/translation.js"></script>-->
+
+
+    <!--&lt;!&ndash;App&ndash;&gt;-->
+    <!--<script src="../../Work/Sambansa/app/app.js"></script>-->
+    <!--<script src="../../Work/Sambansa/app/config.js"></script>-->
+    <!--<script src="../../Work/Sambansa/app/run.js"></script>-->
+    <!--<script src="../../Work/Sambansa/app/controller.js"></script>-->
+
+    <!--&lt;!&ndash;Factories&ndash;&gt;-->
+    <!--<script src="../../Work/Sambansa/app/factories/translation.factory.js"></script>-->
+
+
+
+</head>
+
+<body  ng-app="sambansa" ng-controller="sambansaController">
+
+
+
+
+    <main ui-view>
+
+
+
+
+        <div full-page options="opt">
+
+
+            <!--SECTION 1-->
+            <div class="section"
+                 id="section_1"
+                 data-anchor="home">
+
+                <header class="header" id="header">
+
+                    <div layout
+                         class="main-container">
+
+                        <img src="../../Work/Sambansa/assets/images/sambansa_logo.svg"
+                             alt="Sambansa"
+                             class="header__logo">
+
+
+                        <div flex="80"
+                             flex-offset="10"
+                             class="header__menu" id="menu">
+
+                            <a data-menuanchor="home"
+                               class="header__menu-item active">
+                                {{translation.header.home}}
+                            </a>
+                            <a data-menuanchor="aboutUs"
+                               class="header__menu-item">
+                                {{translation.header.about_us}}
+                            </a>
+                            <a data-menuanchor="gallery"
+                               class="header__menu-item">
+                                {{translation.header.gallery}}
+                            </a>
+                            <a data-menuanchor="carnival"
+                               class="header__menu-item">
+                                {{translation.header.carnival}}
+                            </a>
+                            <a data-menuanchor="joinUs"
+                               class="header__menu-item">
+                                {{translation.header.join_us}}
+                            </a>
+                            <a data-menuanchor="bookUs"
+                               class="header__menu-item">
+                                {{translation.header.book_us}}
+                            </a>
+                            <a data-menuanchor="contact"
+                               class="header__menu-item">
+                                {{translation.header.contact}}
+                            </a>
+
+                        </div>
+
+
+                        <div class="header__trans">
+                            <a ng-click="changeTrans('en')"
+                               ng-class="{'text-bold': activeLanguage === 'en'}">Eng</a>
+                            <strong>&nbsp; | &nbsp;</strong>
+                            <a ng-click="changeTrans('sr')"
+                               ng-class="{'text-bold': activeLanguage === 'sr'}">Srp</a>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <!--<div class="main-container tableize tableize&#45;&#45;fixed">-->
+
+                    <!--<div class="tableize__cell">-->
+                    <!--<img src="../../Work/Sambansa/assets/images/sambansa_logo.svg"-->
+                    <!--alt="Sambansa"-->
+                    <!--class="header__logo">-->
+                    <!--</div>-->
+
+                    <!--<a class="header__item active"-->
+                    <!--data-menuanchor="home">{{translation.header.home}}</a>-->
+                    <!--<a class="header__item"-->
+                    <!--data-menuanchor="aboutUs">{{translation.header.about_us}}</a>-->
+                    <!--<a class="header__item"-->
+                    <!--data-menuanchor="gallery">{{translation.header.gallery}}</a>-->
+                    <!--<a class="header__item"-->
+                    <!--data-menuanchor="carnival">{{translation.header.carnival}}</a>-->
+                    <!--<a class="header__item"-->
+                    <!--data-menuanchor="joinUs">{{translation.header.join_us}}</a>-->
+                    <!--<a class="header__item"-->
+                    <!--data-menuanchor="bookUs">{{translation.header.book_us}}</a>-->
+                    <!--<a class="header__item"-->
+                    <!--data-menuanchor="contact">{{translation.header.contact}}</a>-->
+
+
+
+
+
+                    <!--<div class="header__item text-right">-->
+                    <!--<a ng-click="changeTrans('en')"-->
+                    <!--ng-class="{'text-bold': activeLanguage === 'en'}">Eng</a>-->
+                    <!--<strong>&nbsp; | &nbsp;</strong>-->
+                    <!--<a ng-click="changeTrans('sr')"-->
+                    <!--ng-class="{'text-bold': activeLanguage === 'sr'}">Srp</a>-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                </header>
+
+
+            </div>
+            <!--END OF SECTION 1-->
+
+
+            <!--SECTION 2-->
+            <div class="section gradient-2"
+                 id="section_2"
+                 data-anchor="aboutUs">
+
+
+                <div layout class="layout-center">
+
+                    <div class="main-container"
+                         layout
+                         layout-wrap="wrap"
+                         layout-padding>
+
+                        <div flex="100">
+                            <h2>{{translation.header.about_us}}</h2>
+                        </div>
+
+                        <div flex="33">
+
+                            <p>
+                                Prateći trendove širenja muzike iz latino američkih zemalja,konkretno Brazila, širom sveta,grupa muzičara iz Novog Sada je osnovala muzički sastav u martu 2006.god, sa željom da tu vrstu muzike približi publici u ovom regionu.To je tada bio prvi bend na balkanu koji izvodi ovu vrstu muzike i imao je standardnu postavku samba baterie kao što je to i u Brazilu.
+                            </p>
+                            <p>
+                                Sambansa škola sambe nastala je u junu 2007.godine, u Novom Sadu.Osnivač je Saša Ignjatović,perkusionista i lider grupe Bateria Sambansa.Escola de samba Sambansa, je prva škola brazilskih samba udaraljki na balkanu. Cilj škole je da omogući zainteresovanima da nauče da sviraju brazilske udaraljke...
+                            </p>
+
+                        </div>
+
+                        <div flex="66">
+                            <img src="../../Work/Sambansa/assets/images/section_2.png"
+                                 alt="Sambansa"
+                                 class="img--10">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!--END OF SECTION 2-->
+
+
+            <!--SECTION 3-->
+            <div class="section gradient-3"
+                 id="section_3"
+                 data-anchor="gallery">
+
+                <div layout class="layout-center">
+
+                    <div class="main-container"
+                         layout
+                         layout-wrap="wrap"
+                         layout-padding>
+
+                        <div flex="100">
+                            <h2>{{translation.header.gallery}}</h2>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!--END OF SECTION 3-->
+
+
+            <!--SECTION 4-->
+            <div class="section gradient-4"
+                 id="section_4"
+                 data-anchor="carnival">
+
+                <div layout class="layout-center">
+
+                    <div class="main-container"
+                         layout
+                         layout-wrap="wrap"
+                         layout-padding>
+
+                        <div flex="100">
+                            <h2>{{translation.header.carnival}}</h2>
+
+                            <img src="../../Work/Sambansa/assets/images/section_4_line.png"
+                                 alt="Sambansa"
+                                 class="carnival-line">
+
+                        </div>
+
+                        <div flex="33" class="color-white">
+                            <p ng-bind-html="translation.carnival"></p>
+
+                            <a href="http://www.danibrazila.org/"
+                               target="_blank"
+                               class="carnival-link">
+                                www.danibrazila.org
+                            </a>
+                        </div>
+
+                        <div flex="66">
+                            <img src="../../Work/Sambansa/assets/images/section_4.png"
+                                 alt="Sambansa"
+                                 class="img--10">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--END OF SECTION 4-->
+
+
+            <!--SECTION 5-->
+            <div class="section gradient-5"
+                 id="section_5"
+                 data-anchor="joinUs">
+
+                <div layout class="layout-center">
+
+                    <div class="main-container"
+                         layout
+                         layout-wrap="wrap"
+                         layout-padding>
+
+                        <div flex="100">
+                            <h2>{{translation.header.join_us}}</h2>
+                        </div>
+
+                        <div flex="66">
+                            <img src="../../Work/Sambansa/assets/images/section_5.png"
+                                 alt="Sambansa"
+                                 class="img--10">
+                        </div>
+
+                        <div flex="33" class="color-white">
+                            <p ng-bind-html="translation.join_us"></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--END OF SECTION 5-->
+
+
+            <!--SECTION 6-->
+            <div class="section gradient-6"
+                 id="section_6"
+                 data-anchor="bookUs">
+
+                <div layout class="layout-center">
+
+                    <div class="main-container"
+                         layout
+                         layout-wrap="wrap"
+                         layout-padding>
+
+                        <div flex="100">
+                            <h2>{{translation.header.book_us}}</h2>
+                        </div>
+
+                        <div flex="33" class="color-white">
+                            <p ng-bind-html="translation.book_us"></p>
+                        </div>
+
+
+                        <div flex="66"
+                             class="text-right">
+                            <img src="../../Work/Sambansa/assets/images/section_6.png"
+                                 alt="Sambansa"
+                                 class="">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--END OF SECTION 6-->
+
+
+            <!--SECTION 7-->
+            <div class="section gradient-7"
+                 id="section_7"
+                 data-anchor="contact">
+
+
+                <div layout class="layout-center">
+
+                    <div class="main-container"
+                         layout
+                         layout-wrap="wrap"
+                         layout-padding>
+
+                        <div flex="100">
+                            <h2>{{translation.header.contact}}</h2>
+                        </div>
+
+                        <div flex="100">
+                            <p>Saša Ignjatović</p>
+                            <p>+381 64 2616137</p>
+                            <p>sambansa@gmail.com</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--END OF SECTION 7-->
+
+        </div>
+
+
+
+    </main>
+
+</body>
+</html>
+
+
